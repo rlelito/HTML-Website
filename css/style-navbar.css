@@ -1,0 +1,9 @@
+.main-head{
+	font-family: 'Roboto', sans-serif;}
+
+#menuDomek .nav-item{
+	padding-left: 5px;
+	padding-right: 5px;}
+
+#menuDomek .nav-item .fas{
+	padding-right: 5px;}

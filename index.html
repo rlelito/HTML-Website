@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<!-- Responsive meta tag -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap - CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<title>Domek</title>
+		<link rel="shortcut icon" type="image/png" href="img/house-favicon.ico">
+		<!--    <link rel="icon" type="image/x-icon" href="img/favicon.ico">    -->
+	<link rel="stylesheet" type="text/css" href="css/style-main.css">
+	<link rel="stylesheet" type="text/css" href="css/style-navbar.css">
+	<link rel="stylesheet" type="text/css" href="css/style-slider.css">
+	<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- Font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<!-- Session -->
+		<script>
+			<?php
+				session_start();
+				$active = false;
+				if(isset($_SESSION['Login']))
+				{
+					$active = true;
+					echo "Login: ". $_SESSION['Login'];
+				}
+			?>
+		</script>
+</head>
+<body>
+<!-- NAV MENU -->
+	<div class="main-head">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="img/house-favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+				<b>DOMEK</b>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDomek" aria-controls="menuDomek" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="menuDomek">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#o-nas"><i class="fas fa-info-circle"></i>O NAS</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#okolica"><i class="fas fa-tree"></i>OKOLICA</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#galeria"><i class="fas fa-images"></i>GALERIA</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#pokoje"><i class="fas fa-bed"></i>POKOJE</a>
+					</li>
+					<li class="nav-item dropdown active">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-calendar-check"></i>REZERWACJA
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#rezerwacja-cennik"><i class="fas fa-dollar-sign"></i>CENNIK</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#rezerwacja-form"><i class="fas fa-calendar-plus"></i>REZERWUJ</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav navbar-right">
+					<li class="nav-item active">
+						<a class="nav-link" href="#kontakt"><i class="fas fa-envelope"></i>KONTAKT</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="admin_zaloguj.html"><i class="fas fa-toolbox"></i>PANEL</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<main class="site-body main-domek">
+		<div class="max-page-width ml-auto mr-auto">
+			<div class="page-section page-section--no-bottom-spacing slider max-full-screen-height d-flex" id="Slider">
+				<div class="container d-flex flex-column justify-content-around" id="main-other">
+					<div class="row justify-content-center text-center" id="Font-IndieFlower">
+						<div class="col-md-8">
+							<h1 class="h3 font-mc-ten"><b class="Box-Transparency">Domek</b></h1>
+							<h2 class="Box-Transparency"><b>Quisque nisl est, porttitor sit amet sagittis ac, molestie vitae</b></h2>
+						</div>
+						<div class="col-md-6">
+							<p class="Box-Transparency"><b>Cras facilisis dictum purus vel sagittis. Nullam vitae congue tortor, ac imperdiet eros. Donec rutrum ipsum in ipsum luctus, eget iaculis dolor lacinia. Integer ac posuere mi, at venenatis eros.</b></p>
+						</div>
+					</div>
+					<div class="row justify-content-center text-center">
+						<div class="col-10 text-center mt-5 mb-5 mb-md-0 align-self-center d-md-flex justify-content-center" role="group" aria-label="Main-Site-Slider">
+							<a class="btn btn-light btn-lg" href="#o-nas" role="button" id="Button-Slider-Left">
+								<i class="fas fa-angle-down"></i>
+								O NAS
+							</a>
+							<a class="btn btn-light btn-lg" href="#okolica" role="button" id="Button-Slider-Middle">
+								<i class="fas fa-angle-down"></i>
+								OKOLICA
+							</a>
+							<a class="btn btn-light btn-lg" href="#pokoje" role="button" id="Button-Slider-Right">
+								<i class="fas fa-angle-down"></i>
+								POKOJE
+							</a>
+						</div>
+					</div>
+					<div class="row mt-md-5 text-center d-none d-md-block">
+						<a class="btn btn-light Box-Transparency" href="#o-nas">
+							<i class="fas fa-angle-down fa-4x"></i>
+						</a>
+					</div>
+				</div>
+				<div class="main-slider">
+				<div class="slide show" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/lake.jpeg);"></div>
+				<!-- Source: http://wallpaperswide.com/a_wooden_house_forest-wallpapers.html -->
+				<div class="slide" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/wooden_house_forest-wallpaper.jpg);"></div>
+				<!-- Source: http://wallpaperswide.com/lake_house-wallpapers.html -->
+				<div class="slide" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/lake_house-wallpaper.jpg);"></div>
+				</div>
+			</div>
+		<!-- O NAS -->
+			<div class="d-flex flex-column flex-md-row" id="o-nas">
+				<div class="col-md-6 bg-blue half-page-img-col"></div>
+				<div class="col-md-4 offset-md-1 d-flex align-items-center justify-content-center">
+					<div class="page-section page-section--double-spacing">
+						<div class="container">
+							<div class="row justify-content-center text-center">
+								<h2 class="mb-4">O NAS</h2>
+								<div class="text-left">
+									<p class="mb-4">Proin maximus dignissim dui, a pulvinar diam pellentesque id. Aliquam nec dictum nisi, nec tincidunt.</p>
+									<p class="mb-4">Proin suscipit tortor id pharetra imperdiet. Proin dui dui, lobortis a tincidunt non, ultrices fermentum eros. Aenean varius imperdiet mauris, sed pretium odio mollis in. Vivamus eget mi quis arcu placerat ornare sit amet eu ligula. In orci elit, pellentesque.<!-- <a href="#"> --></p>
+									<p class="mb-4">Integer fringilla metus nec tellus egestas, id placerat sapien efficitur. Etiam mollis dignissim odio, in fermentum lacus porta non. Vestibulum volutpat leo id nisl pellentesque mattis. Duis lobortis ligula nec gravida mollis. Sed congue convallis velit a efficitur. Etiam dictum ultrices fermentum.</p>
+									<p class="text-right mb-4">Podpisano,<br> Jan Kowalski</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- OKOLICA -->
+			<div class="d-flex flex-column flex-md-row" id="okolica">
+				<div class="col-md-6 bg-light-blue order-md-2 offset-md-1 half-page-img-col"></div>
+				<div class="col-md-4 offset-md-1 d-flex align-items-center justify-content-center">
+					<div class="page-section page-section--double-spacing">
+						<div class="container">
+							<div class="row justify-content-center text-center">
+								<h2 class="mb-4">OKOLICA</h2>
+								<div class="text-left">
+									<p class="mb-4">Etiam turpis nibh, pellentesque vitae dictum at, facilisis vel lectus. Mauris in est augue. Vestibulum hendrerit ligula nulla, in blandit nulla dapibus in. Mauris in mauris luctus, ornare dolor eget.</p>
+									<p class="mb-4"><br></p>
+								</div>
+								<h2 class="mb-4">Atrakcje</h2>
+								<div class="text-left">
+									<p class="mb-4">Praesent eu lacus elit. Nam a consectetur diam, tincidunt aliquam sapien. Nunc eget.</p>
+									<p class="mb-4">Duis ut eleifend elit. Phasellus consequat laoreet felis. Proin aliquet orci sem, eu cursus ligula fringilla vitae. Sed nec dictum mi. Phasellus et lacus est. Proin at augue non velit tincidunt dapibus ornare vitae arcu. Nunc id rhoncus lorem. Sed maximus lectus vitae turpis mollis, euismod ullamcorper elit dapibus. Suspendisse.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- GALERIA -->
+
+		<!-- POKOJE -->
+			<div class="d-flex bg-dark text-white flex-column flex-md-row slider" id="pokoje">
+				<div class="col-md-6 half-page-img-col" id="galeria">
+					<div class="slide show" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/pokoje-room.jpeg);"></div>
+					<!-- source: https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg -->
+					<div class="slide" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/pokoje-living-room-decor.jpg);"></div>
+					<!-- source: http://cdn.home-designing.com/wp-content/uploads/2009/07/living-room-decor.jpg -->
+					<div class="slide" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/pokoje-kitchen.jpg);"></div>
+					<!-- source: https://www.ikea.com/gb/en/images/rooms/ikea-traditional-looks-for-modern-cooks__1364400266391-s4.jpg -->
+					<div class="slide" style="background-image: url(http://ux.up.krakow.pl/~rlelito/img/pokoje-bathroom.jpg);"></div>
+					<!-- source: https://cdn.modlar.com/photos/594/img/s_1920_x/floating_vanity_5_55aa7c9a5de99.jpg -->
+				</div>
+				<div class="col-md-4 offset-md-1 d-flex align-items-center justify-content-center" id="pokoje-other">
+					<div class="page-section page-section--double-spacing">
+						<div class="container">
+							<div class="row justify-content-center text-center">
+								<h2 class="col-9 mb-4 text-center">POKOJE</h2>
+								<ul class="nav nav-pills mb-4 btn-grid" id="pills-tab" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link btn-dark" id="pills-livingroom-tab" data-toggle="pill" href="#pills-livingroom" role="tab" aria-controls="pills-livingroom" aria-selected="true">Salon</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link btn-dark" id="pills-bedroom-tab" data-toggle="pill" href="#pills-bedroom" role="tab" aria-controls="pills-bedroom" aria-selected="false">Sypialnia</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link btn-dark" id="pills-kitchen-tab" data-toggle="pill" href="#pills-kitchen" role="tab" aria-controls="pills-kitchen" aria-selected="false">Kuchnia</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link btn-dark" id="pills-bathroom-tab" data-toggle="pill" href="#pills-bathroom" role="tab" aria-controls="pills-bathroom" aria-selected="false">Łazienka</a>
+									</li>
+								</ul>
+								<div class="tab-content text-left" id="pills-tabContent">
+									<p class="tab-pane fade show active mb-4" id="pills-livingroom" role="tabpanel" aria-labelledby="pills-livingroom-tab">Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.</p>
+									<p class="tab-pane fade mb-4" id="pills-bedroom" role="tabpanel" aria-labelledby="pills-bedroom-tab">Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</p>
+									<p class="tab-pane fade mb-4" id="pills-kitchen" role="tabpanel" aria-labelledby="pills-kitchen-tab">Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt.</p>
+									<p class="tab-pane fade mb-4" id="pills-bathroom" role="tabpanel" aria-labelledby="pills-bathroom-tab">Pellentesque nibh ex, eleifend eget augue in, tempus tempor mi. Mauris justo arcu, interdum et odio in, hendrerit elementum diam. Aliquam at fermentum dui. Aliquam eget est dignissim, auctor lectus ut, ultricies nisl. Donec ex massa, venenatis in semper eget, fermentum vel justo. Nam sagittis convallis tempor. Sed ut tortor at odio viverra vestibulum eu at lectus.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- REZERWACJA -->
+			<div class="d-flex flex-column flex-md-row text-light bg-success" id="rezerwacja">
+				<div class="col-md-5 order-md-1 offset-md-1 d-flex align-items-center justify-content-center" id="rezerwacja-cennik">
+					<div class="page-section page-section--double-spacing">
+						<div class="container Box-Transparency">
+							<div class="row justify-content-center">
+								<div class="text-left">
+									<h2 class="mb-6 text-center"><b>REZERWACJA</b></h2>
+									<hr class="styleRound">
+									<p class="mb-4 text-center">W celu rezerwacji proszę użyć formularza kontaktowego.</p><br>
+									<h2 class="mb-6 text-center">CENNIK</h2>
+									<ul class="mb-4">
+										<li>Quisque pulvinar sapien ac lectus tincidunt facilisis.</li>
+										<li>Maecenas elementum odio ut velit pellentesque, et dictum sem pulvinar.</li>
+										<li>Morbi ultricies nisi vitae urna facilisis dictum.</li>
+										<li>Duis nec turpis egestas purus ornare feugiat quis id nisi.</li>
+									</ul>
+									<ul class="mb-4">
+										<li>Nullam volutpat dui in tincidunt cursus.</li>
+									</ul>
+									<ul class="mb-4">
+										<li>Nulla aliquam ante sed ligula posuere volutpat.</li>
+										<li>Fusce condimentum velit porta risus suscipit, at consequat enim congue.</li>
+										<li>In sagittis arcu eu nisi elementum, sit amet bibendum ipsum blandit.</li>
+										<li>Mauris commodo eros ac nisi consectetur efficitur.</li>
+										<li>Donec id neque vel libero convallis sollicitudin.</li>
+										<li>Aliquam tempus leo in tincidunt dapibus.</li>
+									</ul>
+									<hr class="styleRoundBottom">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 order-md-2 offset-md-1 d-flex align-items-center justify-content-center" id="rezerwacja-form">
+					<div class="page-section page-section--double-spacing">
+						<div class="container" id="rezerwacjaForm">
+							<div class="row justify-content-center text-left">
+								<h2 class="text-center col-md-12">FORMULARZ KONTAKTOWY</h2>
+								<form action="p_addNewMessage.php" method="post" id="form">
+									<br><p>Dane kontaktowe:</p>
+									<div class="form-group">
+										<input type="text" class="form-control" name="inputName" id="inputName" placeholder="Imię i nazwisko (wymagane)" required>
+									</div>
+									<div class="form-row">
+										<div class="col-md-7">
+											<input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Adres email (wymagane)" required="">
+										</div>
+										<div class="col-md-5">
+											<input type="text" class="form-control" name="inputPhone" id="inputPhone" placeholder="Telefon (wymagane)" required="">
+										</div>
+									</div>
+									<br><p>Wiadomość:</p>
+									<div class="form-group">
+										<input type="text" class="form-control" name="inputTitle" id="inputTitle" placeholder="Tytuł (wymagane)" required>
+									</div>
+									<div class="form-group">
+										<textarea class="form-control is-valid" name="inputTextArea" id="inputTextArea" rows="5" placeholder="Treść wiadomości (wymagane)" required></textarea>
+									</div>
+									<div style="text-align: center;">
+										<input class="btn btn-secondary " type="submit" value="Wyślij" id="inputSend">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- KONTAKT -->
+			<div class="page-section page-section--double-spacing bg-light-blue" id="kontakt" style="background-color: #87CEFA;">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-6 text-center Box-Transparency" style="border-radius: 50px !important;">
+							<h1>KONTAKT</h1><hr>
+							<p>Suspendisse a faucibus turpis. Sed vestibulum, lorem gravida convallis ultricies, arcu enim dapibus enim, vitae faucibus neque libero vitae est.</p>
+							<ul>
+								<li>Adres: 12-345 Miejscowosc 00</li>
+								<li>Tel: 12 789 32 23</li>
+								<li>Kom. 543 766 123</li>
+								<li>mail: kontakt@domek.up</li>
+							</ul>
+						</div>
+						<div class="col-md-6 text-center Box-Transparency">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.67027528545!2d19.90667945192135!3d50.07373637932404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165bb0c172b203%3A0x15a71d3ed97809d2!2sUniwersytet+Pedagogiczny+im.+Komisji+Edukacji+Narodowej!5e0!3m2!1spl!2spl!4v1530303406972" width="100%" height="100%" frameborder="0" style="border:0; min-height: 400px;" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+<footer class="py-3 bg-dark">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright © <b>http://ux.up.krakow.pl/~rlelito/</b> 2018</p>
+	</div>
+	<!-- /.container -->
+</footer>
+
+
+	<!-- Bootstrap - JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+	<!-- jQuery - Slider -->
+		<script src="js/slider.js"></script>
+</body>
+</html>

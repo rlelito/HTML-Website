@@ -1,0 +1,58 @@
+.slider{
+	width: 100%;
+	height: 800px;
+	position: relative;
+}
+
+.slider #main-other, .slider #pokoje-other{
+	z-index: 2;}
+
+.slider .main-slider .slide, .slider .half-page-img-col .slide{
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	transition: opacity 2s ease-in-out;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0;
+}
+
+.slider .slide.show{
+	opacity: 1;}
+
+#Button-Slider-Left, #Button-Slider-Middle, #Button-Slider-Right{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.main-domek h1{
+	font-size: 64px;}
+.main-domek p{
+	font-size: 20px;}
+
+	@media (min-width: 768px){
+		.main-domek #Slider{
+			background-size: 33vw, 100vw, auto, auto;
+			min-height: calc(100vh - (87px + 27px));
+		}
+	}
+	@media (min-width: 992px){
+		.main-domek #Slider{
+			min-height: calc(100vh - (112px + 27px));}
+	}
+	@media only screen and (min-width: 2880px){
+		.main-domek #Slider{
+			min-height: unset;
+			height: 1800px;
+		}
+	}
+	.main-domek #Slider > .container{
+		min-height: 500px;}

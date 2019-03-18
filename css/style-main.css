@@ -1,0 +1,128 @@
+body{
+	background-color: #f8f9fa;
+}
+
+/* C O N T E N T*/
+
+/* Fonts Format */
+#Font-IndieFlower{
+	font-family: 'Indie Flower', cursive;
+	/*color: #ffffff;*/
+	color: black;
+}
+.Box-Transparency{
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#Font-Roboto{
+	font-family: 'Roboto', sans-serif;}
+
+
+/* P A G E   C O N T E N T*/
+.max-full-screen-height{
+	max-height: 1800px;}
+
+.site-body {
+	margin-top: 112px;
+	min-height: 600px;
+}
+	@media (max-width: 991.98px){
+		.site-body{
+			margin-top: 87px;}
+	}
+	@media (max-width: 767.98px){
+		.site-body{
+			margin-top: 63px;}
+	}
+#rezerwacjaForm{
+	background-color: #313131;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-radius: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+	#inputEmail{
+		margin-bottom: 15px;
+	}
+
+
+hr.styleRound{
+	height: 20px; 
+	border-style: solid; 
+	border-color: #313131; 
+	border-width: 10px 0 0 0; 
+	border-radius: 20px; 
+}
+hr.styleRoundBottom{
+	height: 20px;
+	border-style: solid;
+	border-color: #313131; 
+	border-width: 0 0 10px;
+	border-radius: 20px; 
+}
+
+
+
+.page-section{
+	position: relative;
+	padding: 4rem 0;
+}
+	.page-section--half-spacing {
+		padding: 2rem 0;}
+	.page-section--half-top-spacing{
+		padding-top: 2rem;}
+	.page-section--first{
+		padding-top: 2.75rem;}
+	.page-section--double-spacing{
+		padding: 156px 0;}
+	.page-section--no-top-spacing{
+		padding-top: 0 !important;}
+	.page-section--no-bottom-spacing{
+		padding-bottom: 0;}
+	.page-section--no-overflow{
+		overflow: hidden;}
+	@media (max-width: 767.98px){
+		.page-section{
+			padding: 44px 0;}
+		.page-section--first{
+			padding-top: 28px;}
+		.page-section--no-bottom-spacing{
+			padding-bottom: 0;}
+	}
+	.page-section h1, .page-section > .container > .row:first-child > div > :first-child {
+		margin-top: 0;}
+
+
+
+
+
+@media (max-width: 767.98px){
+	.half-page-img-col{
+		height: 30vh;}
+}
+
+.main-domek .half-page-img-col{
+	background-size: cover;
+	background-position: center;
+}
+
+/* BACKGROUNDS */
+.main-domek #o-nas .half-page-img-col{
+	background-image: url(http://ux.up.krakow.pl/~rlelito/img/house-in-the-forest.jpg);
+	/*source: http://comiccabal.com/house-in-the-forest/house-in-the-forest-15/*/
+}
+.main-domek #okolica .half-page-img-col{
+	background-image: url(http://ux.up.krakow.pl/~rlelito/img/Map-Shire.jpg);
+	/* source: https://vignette.wikia.nocookie.net/lotr/images/a/a0/Map_-_Shire.jpg*/
+}
+.main-domek #pokoje .half-page-img-col{
+	/* slider */
+}
+
+.main-domek #rezerwacja .half-page-img-col{
+	background-image: url(http://ux.up.krakow.pl/~rlelito/img/);
+	/* source: */
+}
