@@ -1,4 +1,4 @@
-# Simple HTML Website - project
+# HTML Website - project
 Project was developed as a part of *Hypertext languages and creating web sites* course.\
 Date: 2018-06
 
